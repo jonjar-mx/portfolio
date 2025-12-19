@@ -1,0 +1,8 @@
+tunnel: f8928bfc-a745-4fc2-8028-12ea4b786ca7
+credentials-file: /etc/cloudflared/credentials.json
+
+
+ingress:
+- hostname: dev.portfolio.jonmaxjara.space
+  service: http://app-dev:5173
+- service: http_status:404

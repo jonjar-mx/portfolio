@@ -1,0 +1,18 @@
+services:
+  app-prod:
+    build:
+      context: ./app
+      target: prod
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+
+  cloudflared-prod:
+    image: cloudflare/cloudflared:2025.11.1
+    command: tunnel run
+    restart: unless-stopped
+    depends_on:
+      - app-prod
+    volumes:
+      - ./cloudflared/prod:/etc/cloudflared
+

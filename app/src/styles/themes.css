@@ -1,0 +1,20 @@
+/* DARK (default) */
+:root {
+  --bg: #0f172a;
+  --bg-soft: #020617;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-soft: #0ea5e9;
+}
+
+/* LIGHT */
+[data-theme="light"] {
+  --bg: #f8fafc;
+  --bg-soft: #e2e8f0;
+  --text: #020617;
+  --muted: #475569;
+  --accent: #0284c7;
+  --accent-soft: #0369a1;
+}
+
